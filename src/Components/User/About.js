@@ -1,13 +1,13 @@
 import React from 'react'
 import UserNav from './UserNav'
 
-function Links() {
+function About() {
     return (
         <div>
             <UserNav/>
-            <h1>Links</h1>
+            <h1>About</h1>
         </div>
     )
 }
 
-export default Links
+export default About

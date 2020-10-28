@@ -1,15 +1,9 @@
 import React, {useState, useEffect} from 'react'
-import UserNav from './UserNav';
-import TextHeader from './Images/FAHR_TEXT_transparent.png'
+import AdminNav from './AdminNav'
 import { Container, Button, Image, Row, Col} from 'react-bootstrap'
-import {connect} from 'react-redux';
-import {getAdmin} from '../../redux/reducer';
-import AdminNav from '../Admin/AdminNav';
-import axios from 'axios';
-import {Link} from 'react-router-dom';
+import axios from 'axios'
 
-function Home(props) {
-    const [isLogged, setIsLogged] = useState(false);
+function Dashboard() {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
@@ -39,12 +33,16 @@ function Home(props) {
 
     return (
         <div>
-            {props.admin.first_name ? <AdminNav/> :
-           <UserNav />}
-           {mappedPosts}
+            <AdminNav/>
+            <Container>
+                <Col>
+                    <Button href={`/#/admin/new`}>New Post</Button>
+                </Col>
+                {mappedPosts}
+            </Container>
+            
         </div>
     )
 }
 
-const mapStateToProps = reduxState => reduxState;
-export default connect(mapStateToProps, {getAdmin})(Home);
+export default Dashboard
