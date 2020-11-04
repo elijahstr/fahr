@@ -26,7 +26,7 @@ function Home(props) {
     const mappedPosts = posts.map((data, i) => (
         <div key={i}>
             <Container>
-                <a href={`/#/post/${data.post_id}`}>
+                <a href={`/post/${data.post_id}`}>
                    <h1>{data.post_title}</h1> 
                 </a>
                 <h4>{data.first_name} {data.last_name} <p>{data.post_date}</p></h4>
