@@ -7,7 +7,7 @@ import Resources from './Components/User/Resources';
 import About from './Components/User/About';
 import Auth from './Components/Admin/Auth';
 import Dashboard from './Components/Admin/Dashboard';
-import ManagePosts from './Components/Admin/ManagePosts';
+import Manage from './Components/Admin/Manage';
 import NewPost from './Components/Admin/NewPost';
 
 export default(
@@ -19,7 +19,7 @@ export default(
         <Route path = '/post/:postid' component={Post}/>
         <Route exact path = '/admin' component={Auth}/>
         <Route path = '/admin/dashboard' component={Dashboard}/>
-        <Route path = '/admin/manage' component={ManagePosts}/>
+        <Route path = '/admin/manage' component={Manage}/>
         <Route path = '/admin/new' component={NewPost}/>
     </Switch>
 )

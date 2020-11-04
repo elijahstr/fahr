@@ -1,0 +1,1 @@
+select email from email_list;

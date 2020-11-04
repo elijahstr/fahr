@@ -2,8 +2,10 @@ import React, {useState, useEffect} from 'react'
 import AdminNav from './AdminNav'
 import { Container, Button, Image, Row, Col} from 'react-bootstrap'
 import axios from 'axios'
+import {getAdmin} from '../../redux/reducer';
+import {connect} from 'react-redux';
 
-function Dashboard() {
+function Dashboard(props) {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
@@ -17,6 +19,12 @@ function Dashboard() {
 
         return () => stopCall = true;
     });
+
+    useEffect(()=>{
+        if(!props.admin.first_name){
+            props.history.push('/admin')
+        }
+    })
 
     const mappedPosts = posts.map((data, i) => (
         <div key={i}>
@@ -34,6 +42,7 @@ function Dashboard() {
     return (
         <div>
             <AdminNav/>
+            {/* <testNav/> */}
             <Container>
                 <Col>
                     <Button href={`/#/admin/new`}>New Post</Button>
@@ -45,4 +54,5 @@ function Dashboard() {
     )
 }
 
-export default Dashboard
+const mapStateToProps = reduxState => reduxState;
+export default connect(mapStateToProps, {getAdmin})(Dashboard);

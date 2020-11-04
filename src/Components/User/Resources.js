@@ -1,14 +1,31 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import UserNav from './UserNav'
+import AdminNav from '../Admin/AdminNav';
+import { Container, Button, Row, Col, Form, Dropdown, Modal, Table} from 'react-bootstrap'
+import {connect} from 'react-redux';
+import {getAdmin} from '../../redux/reducer';
 
-function Resources() {
+function Resources(props) {
     return (
         <div>
-          <UserNav/>
-        <h1>Resources</h1>  
+          {props.admin.first_name ? <AdminNav/> :
+           <UserNav />}
+        <Container className="d-flex justify-content-center">
+            <h1>Resources</h1>
+        </Container>
+        <Container>
+            <h3>General Information:</h3>
+        </Container>
+        <Container>
+            <h3>Important Forms:</h3>
+        </Container>
+        <Container>
+            <h3>Misc:</h3>
+        </Container>
         </div>
     )
 }
 
-export default Resources
+const mapStateToProps = reduxState => reduxState;
+export default connect(mapStateToProps, {getAdmin})(Resources);
 

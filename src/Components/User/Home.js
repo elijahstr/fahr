@@ -9,7 +9,6 @@ import axios from 'axios';
 import {Link} from 'react-router-dom';
 
 function Home(props) {
-    const [isLogged, setIsLogged] = useState(false);
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
@@ -41,6 +40,9 @@ function Home(props) {
         <div>
             {props.admin.first_name ? <AdminNav/> :
            <UserNav />}
+           <Container>
+               <Image src={TextHeader} fluid/>
+           </Container>
            {mappedPosts}
         </div>
     )
