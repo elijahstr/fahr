@@ -49,7 +49,8 @@ function Post(props) {
 
     return (
         <div>
-            <AdminNav/>
+            {props.admin.first_name ? <AdminNav/> :
+           <UserNav />}
             <>
             <Modal show={deleteAlert} onHide={() => setDeleteAlert(false)} variant="danger">
                 <Modal.Header closeButton>
@@ -90,7 +91,8 @@ function Post(props) {
                 </Container>
             :
             <Container>
-                <Button onClick={()=> setEditing(true)}>Edit</Button>
+                {props.admin.first_name ? <Button onClick={()=> setEditing(true)}>Edit</Button> :
+                null}
                 <h1>{post.post_title}
                 </h1>
                 
