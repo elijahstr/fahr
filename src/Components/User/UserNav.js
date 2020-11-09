@@ -14,13 +14,13 @@ function UserNav() {
                         <Nav.Link href='/'>Home</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link href='about'>About</Nav.Link>
+                        <Nav.Link href='/about'>About</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link href='resources'>Resources</Nav.Link>
+                        <Nav.Link href='/resources'>Resources</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link href='links'>Links</Nav.Link>
+                        <Nav.Link href='/links'>Links</Nav.Link>
                     </Nav.Item>
                 </Nav>
             </Navbar>
