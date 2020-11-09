@@ -45,12 +45,12 @@ function AdminNav(props) {
                 </Nav>
                 <Nav>
                 <Nav.Link href=''>Home</Nav.Link>
-                <Nav.Link href='#about'>About</Nav.Link>
-                <Nav.Link href='#resources'>Resources</Nav.Link>
-                <Nav.Link href='#links'>Links</Nav.Link>
-                <Nav.Link href='#admin/dashboard'>Dashboard</Nav.Link>
-                <Nav.Link href='#admin/new'>New Post</Nav.Link>
-                <Nav.Link href='#admin/manage'>Manage</Nav.Link>
+                <Nav.Link href='about'>About</Nav.Link>
+                <Nav.Link href='resources'>Resources</Nav.Link>
+                <Nav.Link href='links'>Links</Nav.Link>
+                <Nav.Link href='admin/dashboard'>Dashboard</Nav.Link>
+                <Nav.Link href='admin/new'>New Post</Nav.Link>
+                <Nav.Link href='admin/manage'>Manage</Nav.Link>
                 <Nav.Link onClick={()=>logout()}>Logout</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
