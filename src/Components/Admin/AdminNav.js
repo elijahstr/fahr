@@ -1,17 +1,13 @@
-import React, {useState, useEffect} from 'react'
-import { Container, Nav, Button, Image, Row, Col, Navbar, DropdownButton, Dropdown, NavDropdown} from 'react-bootstrap'
+import React from 'react'
+import {Nav, Image, Navbar} from 'react-bootstrap'
 import logo from '../User/Images/FAHR_BOX_white.png'
-import menu from '../User/Images/white-menu-icon-12.jpg'
+// import menu from '../User/Images/white-menu-icon-12.jpg'
 import {connect} from 'react-redux';
 import {getAdmin, clearAdmin} from '../../redux/reducer';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
 
-function AdminNav(props) {
-    const [mobileView, setMobileView] = useState(false);
-
-    const width = React.useState(window.innerWidth)[0],
-        breakpoint = 1024;
-    
+function AdminNav(props) { 
     const logout = () => {
         axios.post('/auth/logout')
         .then(()=>{
@@ -19,24 +15,13 @@ function AdminNav(props) {
         })
     }
 
-    const dropdownMenu = () => {
-        if(width<=breakpoint){
-            setMobileView(true)
-            console.log(width + "hello");
-        }
-    }
-
-    useEffect(()=>{
-        dropdownMenu()
-    })
-
     return (
         <div>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Navbar.Brand>
-                <a href='/'>
+                <Link to='/'>
                     <Image className="nav-image" src={logo} fluid/>
-                </a>
+                </Link>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
@@ -44,14 +29,24 @@ function AdminNav(props) {
                 <h4 style={{color: "white"}}>Hi {props.admin.first_name} {props.admin.last_name}</h4>
                 </Nav>
                 <Nav>
-                <Nav.Link href=''>Home</Nav.Link>
+                {/* <Link to='/'><Nav.Link>Home</Nav.Link></Link>
                 <Nav.Link href='/about'>About</Nav.Link>
                 <Nav.Link href='/resources'>Resources</Nav.Link>
                 <Nav.Link href='/links'>Links</Nav.Link>
                 <Nav.Link href='/#/admin/dashboard'>Dashboard</Nav.Link>
                 <Nav.Link href='/admin/new'>New Post</Nav.Link>
-                <Nav.Link href='/admin/manage'>Manage</Nav.Link>
-                <Nav.Link onClick={()=>logout()}>Logout</Nav.Link>
+                <Link to='/admin/manage'><Nav.Link>Manage</Nav.Link> </Link>
+                <Nav.Link><Link to='/admin/manage'>Manage</Link></Nav.Link>
+                <Nav.Link onClick={()=>logout()}>Logout</Nav.Link> */}
+
+                    <Nav.Link><Link to='/'>Home</Link></Nav.Link>
+                    <Nav.Link><Link to='/about'>About</Link></Nav.Link>
+                    <Nav.Link><Link to='/resources'>Resources</Link></Nav.Link>
+                    <Nav.Link><Link to='/links'>Links</Link></Nav.Link>
+                    <Nav.Link><Link to='/admin/dashboard'>Dashboard</Link></Nav.Link>
+                    <Nav.Link><Link to='/admin/new'>New Post</Link></Nav.Link>
+                    <Nav.Link><Link to='/admin/manage'>Manage</Link></Nav.Link>
+                    <Nav.Link onClick={()=>logout()}><Link>Logout</Link></Nav.Link>
                 </Nav>
             </Navbar.Collapse>
             </Navbar>

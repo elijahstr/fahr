@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Nav, Button, Image, Row, Col, Navbar} from 'react-bootstrap'
+import {Nav, Image, Navbar} from 'react-bootstrap'
 import logo from './Images/FAHR_BOX_white.png'
 
 function UserNav() {

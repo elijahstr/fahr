@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from 'react'
 import UserNav from './UserNav';
-import { Container, Button, Image, Row, Col, Form, Alert, Modal} from 'react-bootstrap'
+import { Container, Button, Row, Col, Form, Modal} from 'react-bootstrap'
 import {connect} from 'react-redux';
 import {getAdmin} from '../../redux/reducer';
 import AdminNav from '../Admin/AdminNav';
 import axios from 'axios';
-import {Link} from 'react-router-dom';
+// import {Link} from 'react-router-dom';
 
 function Post(props) {
     const [post, setPost] = useState({}),

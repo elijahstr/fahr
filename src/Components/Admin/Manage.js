@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import AdminNav from './AdminNav'
-import { Container, Button, Row, Col, Form, Dropdown, Modal, Table} from 'react-bootstrap'
+import { Container, Button, Row, Col, Form, Modal, Table} from 'react-bootstrap'
 import axios from 'axios'
 import {getAdmin} from '../../redux/reducer';
 import {connect} from 'react-redux';

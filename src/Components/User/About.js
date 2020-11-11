@@ -1,7 +1,7 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import UserNav from './UserNav'
 import AdminNav from '../Admin/AdminNav';
-import { Container, Button, Row, Col, Form, Dropdown, Modal, Table} from 'react-bootstrap'
+import { Container} from 'react-bootstrap'
 import {connect} from 'react-redux';
 import {getAdmin} from '../../redux/reducer';
 

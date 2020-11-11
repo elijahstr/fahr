@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from 'react'
 import UserNav from './UserNav';
 import TextHeader from './Images/FAHR_TEXT_transparent.png'
-import { Container, Button, Image, Row, Col} from 'react-bootstrap'
+import { Container, Image} from 'react-bootstrap'
 import {connect} from 'react-redux';
 import {getAdmin} from '../../redux/reducer';
 import AdminNav from '../Admin/AdminNav';
 import axios from 'axios';
-import {Link} from 'react-router-dom';
+// import {Link} from 'react-router-dom';
 
 function Home(props) {
     const [posts, setPosts] = useState([]);

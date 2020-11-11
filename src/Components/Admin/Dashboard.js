@@ -1,9 +1,10 @@
 import React, {useState, useEffect} from 'react'
 import AdminNav from './AdminNav'
-import { Container, Button, Image, Row, Col} from 'react-bootstrap'
+import { Container, Button, Col} from 'react-bootstrap'
 import axios from 'axios'
 import {getAdmin} from '../../redux/reducer';
 import {connect} from 'react-redux';
+import {Link} from 'react-router-dom';
 
 function Dashboard(props) {
     const [posts, setPosts] = useState([]);
@@ -29,9 +30,9 @@ function Dashboard(props) {
     const mappedPosts = posts.map((data, i) => (
         <div key={i}>
             <Container>
-                <a href={`/post/${data.post_id}`}>
+                <Link to={`/post/${data.post_id}`}>
                    <h1>{data.post_title}</h1> 
-                </a>
+                </Link>
                 <h4>{data.first_name} {data.last_name} <p>{data.post_date}</p></h4>
                 <p>{data.content}</p> 
             </Container>
@@ -45,7 +46,7 @@ function Dashboard(props) {
             {/* <testNav/> */}
             <Container>
                 <Col>
-                    <Button href={`/#/admin/new`}>New Post</Button>
+                    <Button variant='dark'><Link to='/admin/new'>New Post</Link></Button>
                 </Col>
                 {mappedPosts}
             </Container>
