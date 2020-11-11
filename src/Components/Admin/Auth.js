@@ -12,7 +12,7 @@ function Auth(props) {
         axios.post('/auth/login', {email, password})
         .then((res) => {
             props.getAdmin(res.data);
-            props.history.push('/admin/dashboard')
+            props.history.push('/#/admin/dashboard')
         })
         .catch(err => console.log(err))
     }
