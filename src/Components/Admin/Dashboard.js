@@ -43,7 +43,6 @@ function Dashboard(props) {
     return (
         <div>
             <AdminNav/>
-            {/* <testNav/> */}
             <Container>
                 <Col>
                     <Button variant='dark'><Link to='/admin/new'>New Post</Link></Button>

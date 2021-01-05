@@ -5,6 +5,7 @@ import { Container, Image} from 'react-bootstrap'
 import {connect} from 'react-redux';
 import {getAdmin} from '../../redux/reducer';
 import AdminNav from '../Admin/AdminNav';
+import HomeCarousel from './HomeCarousel';
 import axios from 'axios';
 // import {Link} from 'react-router-dom';
 
@@ -41,7 +42,7 @@ function Home(props) {
             {props.admin.first_name ? <AdminNav/> :
            <UserNav />}
            <Container>
-               <Image src={TextHeader} fluid/>
+               <HomeCarousel/>
            </Container>
            {mappedPosts}
         </div>

@@ -11,21 +11,21 @@ function Links(props) {
             {props.admin.first_name ? <AdminNav/> :
            <UserNav />}
             <Container className="d-flex justify-content-center">
-                <h1>Links:</h1>
+                <h1>Here are some of our favorite books and articles:</h1>
             </Container>
-            <Container>
+            <Container style={{marginTop: '20px'}}>
                 <ul>
                     <li>
-                        <a href='/'>Link1</a>
-                        <p>Lorem ipsum</p>
+                        <h2><a target="_blank" rel='noopener noreferrer' href='https://www.julielythcotthaims.com/how-to-raise-an-adult'>How To Raise An Adult</a></h2> 
                     </li>
                     <li>
-                        <a href='/'>Link2</a>
-                        <p>Lorem ipsum</p>    
+                        <h2><a target="_blank" rel='noopener noreferrer' href='https://www.harpercollins.com/products/the-teenage-brain-frances-e-jensenamy-ellis-nutt?variant=32207322710050'>The Teenage Brain</a></h2>   
                     </li>
                     <li>
-                        <a href='/'>Link3</a>
-                        <p>Lorem ipsum</p>
+                        <h2><a target="_blank" rel='noopener noreferrer' href='https://www.calnewport.com/books/digital-minimalism/'>Digital Minimalism</a></h2>
+                    </li>
+                    <li>
+                        <h2><a target="_blank" rel='noopener noreferrer' href='https://www.theatlantic.com/magazine/archive/2017/09/has-the-smartphone-destroyed-a-generation/534198/'>Have Smartphones Destroyed A Generation?</a></h2>
                     </li>
                 </ul>
             </Container>

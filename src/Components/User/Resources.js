@@ -14,14 +14,14 @@ function Resources(props) {
             <h1>Resources</h1>
         </Container>
         <Container>
-            <h3>General Information:</h3>
+            <h3>In this section we plan to have important documents and forms in PDF format to assist parents and students.  Stay tuned for updates!</h3>
         </Container>
-        <Container>
+        {/* <Container>
             <h3>Important Forms:</h3>
         </Container>
         <Container>
             <h3>Misc:</h3>
-        </Container>
+        </Container> */}
         </div>
     )
 }
